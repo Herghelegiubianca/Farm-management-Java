@@ -1,0 +1,33 @@
+1. Obiectivul Jocului
+Scopul aplicației este administrarea unei ferme pe parcursul mai multor runde. Jucătorul trebuie să genereze profit prin vânzarea resurselor produse de animale (lapte,
+ ouă, lână) și a plantelor cultivate, evitând falimentul (scăderea banilor sub pragul de 15 lei) sau pierderea tuturor animalelor.
+
+2. Interfața și Navigarea
+La pornire, fereastra principală afișează starea curentă a fermei:
+
+Zona de Status (Sus): Indică runda curentă și bugetul disponibil în portofel.
+
+Zona Centrală: Conține trei liste actualizate în timp real pentru Animale, Plante pe câmp și Inventar (resurse recoltate și semințe).
+
+Zona de Control (Jos): Conține butoanele pentru acțiunile principale ale jucătorului.
+
+3. Pașii de joc
+Proiectul funcționează după următoarea logică:
+
+Gestionarea Magazinului: Jucătorul accesează butonul „Magazin” pentru a cumpăra animale (cu diferite nivele de productivitate), semințe pentru culturi sau hrană gata
+preparată. Tot aici se pot vinde produsele din inventar pentru a obține bani.
+
+Activitatea Agricolă: Prin butonul „Planteaza”, semințele din inventar sunt mutate pe câmp. Acestea au nevoie de un număr de runde pentru a ajunge la maturitate.
+
+Îngrijirea Animalelor: Jucătorul trebuie să monitorizeze nivelul de hrană al animalelor. Selectând un animal și o resursă compatibilă din liste, se poate folosi butonul
+„Hraneste” pentru a le menține în viață și productive.
+
+Recoltarea: Butonul „Recolteaza” verifică automat care animale au produs resurse și care plante sunt mature, transferând produsele finale direct în inventar.
+
+Avansarea în timp: Butonul „Runda urmatoare” procesează trecerea timpului. În acest moment, plantele cresc, animalele devin flămânde (sau mor dacă nu sunt hrănite), iar
+sistemul verifică dacă au fost îndeplinite condițiile de „Game Over”.
+
+4. Sistemul de Validare și Erori
+Proiectul include un sistem de protecție bazat pe excepții. Dacă jucătorul încearcă o acțiune invalidă
+(de exemplu: vinde mai mult decât are, hrănește un animal cu o resursă greșită sau încearcă să cumpere fără fonduri), aplicația va afișa un mesaj de eroare
+descriptiv, blocând acțiunea respectivă fără a întrerupe jocul.
